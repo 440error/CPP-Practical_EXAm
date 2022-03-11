@@ -4,6 +4,7 @@ using namespace std;
 class Matrix
 {
 public:
+    // Function to calculate transpose of matrix
     void transpose(int matrix[3][3])
     {
 
@@ -25,9 +26,9 @@ public:
             cout << endl;
         }
         system("pause");
-
     }
 
+    // Function to calculate the sum of matrices
     void sum(int matrix1[3][3], int matrix2[3][3])
     {
         int matrix3[3][3];
@@ -53,6 +54,7 @@ public:
         system("pause");
     }
 
+    // Function to calculate the product of matrices
     void product(int matrix1[3][3], int matrix2[3][3])
     {
         int matrix3[3][3];
@@ -91,6 +93,7 @@ int main()
 
     int matrix1[3][3], matrix2[3][3];
 
+    // Taking elements for matrix 1
     cout << "Enter the matrix1 elements(3x3 matrix):" << endl;
     for (int i = 0; i < 3; i++)
     {
@@ -99,7 +102,8 @@ int main()
             cin >> matrix1[i][j];
         }
     }
-    
+
+    // Taking elements for ,matrix 2
     cout << "Enter the matrix2 elements(3x3 matrix):" << endl;
     for (int i = 0; i < 3; i++)
     {
@@ -109,11 +113,33 @@ int main()
         }
     }
 
+    // Printing elements of matrix 1
+    cout << "Matrix 1 is: " << endl;
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            cout << matrix1[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    // Printing elements for matrix 2
+    cout << "Matrix 2 is: " << endl;
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            cout << matrix2[i][j] << " ";
+        }
+        cout << endl;
+    }
+
     unsigned choice;
 
     while (1)
     {
-        system("cls");
+        // system("cls");
         cout << "Enter 1 to get the Sum of matrix1 and matrix2. \n";
         cout << "Enter 2 to get the Product of matrix1 and matrix2.  \n";
         cout << "Enter 3 to get the Transpose of matrix1 and matrix2.  \n";
@@ -131,16 +157,17 @@ int main()
             break;
 
         case 3:
-            unsigned int key;
-            cout << "Press 1 for matrix1 and 2 for matrix2 : ";
-            cin >> key;
+            unsigned int val;
 
-            if (key == 1)
+            cout << "Press 1 for matrix1 and 2 for matrix2 : ";
+            cin >> val;
+
+            if (val == 1)
             {
                 obj.transpose(matrix1);
             }
 
-            else if (key == 2)
+            else if (val == 2)
             {
                 obj.transpose(matrix2);
             }
@@ -148,6 +175,7 @@ int main()
             break;
 
         default:
+            cout << "Program ended !" << endl;
             return 0;
         }
     }
