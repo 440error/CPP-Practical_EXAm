@@ -17,18 +17,28 @@ int main()
     f2.open("q_13output.txt");
 
     cout << "Start entering values ............." << endl;
-    for (int i = 0; i < 2; i++)
+    for (int i = 0; i <=5; i++)
     {
         Student obj;
-         
+
+        cout << "Enter the Roll No of student no-" << i << endl;
         cin >> obj.RollNo;
         f2 << obj.RollNo << "  ";
 
+        cout << "Enter the Name of student no-" << i << endl;
         cin.ignore();
         getline(cin, obj.Name);
         f2 << obj.Name << "    ";
 
-        cin >> obj.Class >> obj.Year >> obj.TotalMarks;
+        cout << "Enter the Class of student no-" << i << endl;
+        cin >> obj.Class;
+
+        cout << "Enter the Year of student no-" << i << endl;
+        cin >> obj.Year;
+
+        cout << "Enter the Total Marks obtained by student no-" << i << endl;
+        cin >> obj.TotalMarks;
+
         f2 << obj.Class << "  " << obj.Year << "  " << obj.TotalMarks << endl;
     }
 
