@@ -16,10 +16,11 @@ int main()
     ofstream f2;
     f2.open("q_13output.txt");
 
+    cout << "Start entering values ............." << endl;
     for (int i = 0; i < 2; i++)
     {
         Student obj;
-
+         
         cin >> obj.RollNo;
         f2 << obj.RollNo << "  ";
 

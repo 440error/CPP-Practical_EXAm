@@ -16,7 +16,7 @@ public:
         this->b = b;
         this->c = c;
     }
-    
+
     Triangle(float b, float h)
     {
         this->b = b;
@@ -30,14 +30,14 @@ public:
 
     float area(float a, float b, float c)
     {
-        float p = (a + b + c) / 2;
-        return sqrt(p * (p - a) * (p - b) * (p - c));
+        float s = (a + b + c) / 2;
+        return sqrt(s * (s - a) * (s - b) * (s - c));
     }
 
     // overloaded functions
     float area(float b, float h)
     {
-        return (b + h) / 2;
+        return (b * h) / 2;
     }
     // Overload assignment operator
     Triangle &operator=(const Triangle &triangle)
@@ -71,11 +71,13 @@ int main()
 
     if (t1 == tCopy)
     {
-        cout << "The triangles are equal.\n";
+        cout << endl
+             << "The triangles are equal.\n";
     }
     else
     {
-        cout << "The triangles are not equal.\n";
+        cout << endl
+             << "The triangles are not equal.\n";
     }
 
     return 0;
