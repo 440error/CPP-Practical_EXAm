@@ -129,7 +129,7 @@ int main()
 
     while (1)
     {
-        system("cls");
+        // system("cls");
         cout << "Enter 1 to get the Sum of matrix1 and matrix2. \n";
         cout << "Enter 2 to get the Product of matrix1 and matrix2.  \n";
         cout << "Enter 3 to get the Transpose of matrix1 and matrix2.  \n";
